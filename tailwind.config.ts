@@ -9,10 +9,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        backgroundLight: "#fff",
+        backgroundDark: "#000",
+        gl: "var(--green-light)",
+        gd: "var(--green-dark)",
+      },
+      spacing: {
+        "5px": "5px",
+      },
+      textShadow: {
+        white: "0 0 10px #fff, 0 0 20px #fff", // Définition de l'ombre blanche
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-shadow-white": {
+          textShadow: "0 0 10px #fff, 0 0 20px #fff",
+        },
+      });
+    },
+  ],
 } satisfies Config;
