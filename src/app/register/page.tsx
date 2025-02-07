@@ -20,7 +20,7 @@ const Page = async () => {
 
       {/* Email/Password Sign Up */}
       <form
-        className="space-y-4">
+        className="space-y-4  ">
         <input
           name="email"
           placeholder="Email"

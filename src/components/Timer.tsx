@@ -27,24 +27,23 @@ function Timer({ targetDate }) {
   }, [targetDate]);
 
   return (
-    <div>
-      <div className="flex mt-8 gap-8 justify-center items-center">
-      <span className="flex flex-col justify-center items-center min-w-36 text-4xl py-3 bg-backgroundLight text-gl overflow-x-auto">
-          {timeLeft.days}
-          <small>Jours</small>
-        </span>
-        <span className="flex flex-col justify-center items-center min-w-36 text-4xl py-3 bg-backgroundLight text-gl overflow-x-auto">
-          {timeLeft.hours}
-          <small>Heures</small>
-        </span>
-        <span className="flex flex-col justify-center items-center min-w-36 text-4xl py-3 bg-backgroundLight text-gl overflow-x-auto">
-          {timeLeft.minutes} <small>Minutes</small>
-        </span>
-        <span className="flex flex-col justify-center items-center min-w-36 text-4xl py-3 bg-backgroundLight text-gl overflow-x-auto">
-          {timeLeft.seconds}
-          <small>secondes</small>
-        </span>
-      </div>
+    <div className="flex mt-12 gap-12">
+      <span className="flex flex-col justify-center items-center w-56 h-40 text-9xl py-4 bg-backgroundLight text-gl">
+        {timeLeft.days}
+        <small className="text-7xl mt-2">JRS</small>
+      </span>
+      <span className="flex flex-col justify-center items-center w-56 h-40 text-9xl py-4 bg-backgroundLight text-gl">
+        {timeLeft.hours}
+        <small className="text-7xl mt-2">HRS</small>
+      </span>
+      <span className="flex flex-col justify-center items-center w-56 h-40 text-9xl py-4 bg-backgroundLight text-gl">
+        {timeLeft.minutes}
+        <small className="text-7xl mt-2">MIN</small>
+      </span>
+      <span className="flex flex-col justify-center items-center w-56 h-40 text-9xl py-4 bg-backgroundLight text-gl">
+        {timeLeft.seconds}
+        <small className="text-7xl mt-2">SEC</small>
+      </span>
     </div>
   );
 }
